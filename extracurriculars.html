@@ -23,12 +23,13 @@
 <body>
 <div class="site-wrapper">
   <header>
-    <h1>Welcome to Gardiner Public Schools</h1>
+    <span>Welcome to Gardiner Public Schools</span>
     <!-- Dark Mode Button -->
-    <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
-    <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round"
-	aria-labelledby="darkmode-title">
+<button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32"
+       fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
       <title id="darkmode-title">Toggle dark and light mode</title>
       <circle cx="12" cy="12" r="5" class="sun-core"></circle>
       <g class="sun-rays">
@@ -88,25 +89,27 @@
 	
 <main role="main">
   <section class="page-title" aria-labelledby="extracurriculars-heading">
-    <h2 id="extracurriculars-heading">Extracurricular Activities</h2>
+    <h1 id="extracurriculars-heading">Extracurricular Activities</h1>
     <p>Gardiner Public Schools offers a wide range of extracurricular opportunities that help students grow, lead, and thrive outside the classroom. Whether through athletics, the arts, or academic clubs, we encourage all students to get involved!</p>
   </section>
 
-  <section class="extracurriculars-grid" aria-label="Extracurricular Quick Links">
-    <div class="static-link-grid">
-      <a href="extracurriculars/ffa.html" class="static-link" target="_blank" rel="noopener">FFA</a>
-      <a href="extracurriculars/music.html" class="static-link" target="_blank" rel="noopener">Music</a>
-      <a href="extracurriculars/football.html" class="static-link" target="_blank" rel="noopener">Football</a>
-      <a href="/extracurriculars/volleyball.html" class="static-link" target="_blank" rel="noopener">Volleyball</a>
-      <a href="extracurriculars/basketball.html" class="static-link" target="_blank" rel="noopener">Basketball</a>
-      <a href="extracurriculars/speech--drama.html" class="static-link" target="_blank" rel="noopener">Speech and Drama</a>
-      <a href="extracurriculars/golf.html" class="static-link" target="_blank" rel="noopener">Golf</a>
-      <a href="extracurriculars/track--field.html" class="static-link" target="_blank" rel="noopener">Track &amp; Field</a>
-    </div>
-  </section>
+<section class="extracurriculars-grid" aria-label="Extracurricular Quick Links">
+  <ul class="static-link-grid">
+    <li><a href="extracurriculars/ffa.html" class="static-link" target="_blank" rel="noopener" aria-label="FFA program page, opens in new tab">FFA</a></li>
+    <li><a href="extracurriculars/music.html" class="static-link" target="_blank" rel="noopener" aria-label="Music program page, opens in new tab">Music</a></li>
+    <li><a href="extracurriculars/football.html" class="static-link" target="_blank" rel="noopener" aria-label="Football program page, opens in new tab">Football</a></li>
+    <li><a href="extracurriculars/volleyball.html" class="static-link" target="_blank" rel="noopener" aria-label="Volleyball program page, opens in new tab">Volleyball</a></li>
+    <li><a href="extracurriculars/basketball.html" class="static-link" target="_blank" rel="noopener" aria-label="Basketball program page, opens in new tab">Basketball</a></li>
+    <li><a href="extracurriculars/speech--drama.html" class="static-link" target="_blank" rel="noopener" aria-label="Speech and Drama program page, opens in new tab">Speech and Drama</a></li>
+    <li><a href="extracurriculars/golf.html" class="static-link" target="_blank" rel="noopener" aria-label="Golf program page, opens in new tab">Golf</a></li>
+    <li><a href="extracurriculars/track--field.html" class="static-link" target="_blank" rel="noopener" aria-label="Track and Field program page, opens in new tab">Track &amp; Field</a></li>
+  </ul>
+</section>
+
 <br>
-	<section class="carousel-small">
-  <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+	<section class="carousel-small" role="region" aria-labelledby="carousel-heading">
+	<h2 id="carousel-heading" class="sr-only">Extracurricular Activity Photos</h2>
+	  <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
   <div class="carousel-track">
     <img src="images/extracurricular-carousel/football-1.jpg" alt="Football team holding back the opposing team">
     <img src="images/extracurricular-carousel/ffa-1.jpg" alt="FFA officers posing around a Yellowstone National Park sign">
@@ -120,6 +123,7 @@
     <div class="calendar-embed" style="margin: 0 auto; max-width: 1000px; padding: 0 1.5rem;">
       <iframe
         title="Gardiner Activities Calendar"
+		sandbox="allow-scripts allow-same-origin"
         src="https://calendar.google.com/calendar/embed?title=Gardiner%20Activities%20Calendar&amp;showDate=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=gardiner.org_ksfnedp746mmu8ehkc86slvb98%40group.calendar.google.com&amp;color=%23865A5A&amp;src=gardiner.org_0sh2huslua7at55u2kn2viequs%40group.calendar.google.com&amp;color=%23853104&amp;src=gardiner.org_id4th4u9a4m8nokoa2fk2g2iok%40group.calendar.google.com&amp;color=%23B1440E&amp;src=gardiner.org_5s1946deqmfnkgi24hpuumt4rk%40group.calendar.google.com&amp;color=%23853104&amp;src=gardiner.org_t10dd05vdj07d1q00777ufij2o%40group.calendar.google.com&amp;color=%236B3304&amp;src=gardiner.org_pjko4t7b1m2270k5ipmab086rk%40group.calendar.google.com&amp;color=%2329527A&amp;src=gardiner.org_5p6o5oaqlp73q3j0lkve06ka3k%40group.calendar.google.com&amp;color=%2329527A&amp;src=gardiner.org_8n9r87adi02lcq0tc5mhtpd5q8%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=America%2FDenver"
         width="100%"
         height="600"
@@ -137,11 +141,11 @@
         <!-- Box 1: Logo + Contact Info -->
         <div class="footer-box" aria-labelledby="footer-contact">
           <div class="footer-box-content"> <img src="/images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
-            <p>Gardiner Public Schools<br>
+			  <address style="font-style: normal;">Gardiner Public Schools<br>
               510 Stone Street<br>
               Gardiner, MT 59030<br>
-              Call: <a href="tel:+14068487563">(406) 848-7563</a><br>
-              Fax: (406) 848-0606</p>
+              Call: <a href="tel:+14068487563" aria-label="Call Gardiner Public Schools at 406 848 7563">(406) 848-7563</a><br>
+              Fax: (406) 848-0606</address>
           </div>
         </div>
         <!-- Box 2: Important Links -->
@@ -172,11 +176,12 @@
       <p>&copy; 2025 Gardiner Public Schools. All rights reserved.</p>
     </div>
   </footer>
-  <button class="scroll-top" aria-label="Scroll to top">
-  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
+<button class="scroll-top" aria-label="Scroll to top">
+  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <title>Upward arrow</title>
+    <polyline points="18 15 12 9 6 15" />
   </svg>
-  </button>
+</button>
   <script src="/js/headerscroll.js"></script>
   <script src="/js/hamburger.js"></script>
   <script src="/js/focus.js"></script>

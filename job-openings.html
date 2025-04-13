@@ -23,12 +23,13 @@
 <body>
 <div class="site-wrapper">
   <header>
-    <h1>Welcome to Gardiner Public Schools</h1>
+    <span>Welcome to Gardiner Public Schools</span>
     <!-- Dark Mode Button -->
-    <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
-    <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round"
-	aria-labelledby="darkmode-title">
+<button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32"
+       fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
       <title id="darkmode-title">Toggle dark and light mode</title>
       <circle cx="12" cy="12" r="5" class="sun-core"></circle>
       <g class="sun-rays">
@@ -85,82 +86,114 @@
   <button class="hamburger-toggle" aria-label="Toggle Navigation" aria-expanded="false"> <span class="hamburger-icon"> <span class="hamburger-middle">
   <!-- middle bar -->
   </span> </span> </button>
-  <main role="main">
-    <section aria-labelledby="job-links-heading" class="page-title">
-      <h2 id="job-links-heading">Employment Applications</h2>
-      <div class="static-link-grid" role="group" aria-label="Downloadable job application forms"> <a href="/uploads/1/0/2/4/102472730/certified_employment_application25-26.pdf"
-         class="static-link"
-         target="_blank"
-         rel="noopener"
-         aria-label="Download Certified Job Application PDF"> Certified Job Application </a> <a href="/uploads/1/0/2/4/102472730/classified_employment_application_25-26.docx.pdf"
-         class="static-link"
-         target="_blank"
-         rel="noopener"
-         aria-label="Download Classified Job Application PDF"> Classified Job Application </a> <a href="https://secureapplicant.com/STUDENT/GARDINER-PUBLIC-SCHOOLS/"
-         class="static-link full-span"
-         target="_blank"
-         rel="noopener"
-         aria-label="Complete Online Background Check on Secure Applicant site"> Online Background Check </a> </div>
-    </section>
-    <section aria-labelledby="job-openings-heading" class="board-section">
-      <h2 id="job-openings-heading">Current Job Openings</h2>
-      <article aria-labelledby="superintendent-heading">
-        <h3 id="superintendent-heading">Superintendent / Principal</h3>
-        <p>Gardiner Schools is seeking a Principal/Superintendent beginning July 1, 2025. Gardiner is located at the north entrance of Yellowstone and serves 150 students. Applicants with a Principal certificate willing to enroll in a Superintendent program under a provisional license are welcome to apply.</p>
-        <p><strong>Benefits:</strong> Salary based on experience; subsidized housing available.</p>
-        <p><strong>Application Packet Must Include:</strong></p>
-        <ul>
-          <li>Letter of application/interest</li>
-          <li>Completed district application form</li>
-          <li>Resume</li>
-          <li>Three letters of reference</li>
-          <li>Transcripts</li>
-          <li>Copy of Class III MT Administrative Certificate (or equivalent)</li>
-        </ul>
-      </article>
-      <br>
-      <article aria-labelledby="business-clerk-heading">
-        <h3 id="business-clerk-heading">Business Manager / District Clerk</h3>
-        <p>Gardiner Public Schools is hiring a Business Manager/District Clerk to oversee financial operations and administrative support. This position may be hybrid with partial remote work.</p>
-        <p><strong>Requirements:</strong> Degree in Business/Accounting, prior school clerk experience preferred.</p>
-        <p><strong>Housing:</strong> Full-time subsidized or part-time available.</p>
-        <p><strong>Application Packet Must Include:</strong></p>
-        <ul>
-          <li>Letter of application/interest</li>
-          <li>Completed district application form</li>
-          <li>Resume</li>
-          <li>Three letters of reference</li>
-        </ul>
-      </article>
-      <br>
-      <article aria-labelledby="bus-driver-heading">
-        <h3 id="bus-driver-heading">Bus Drivers (Route, Substitute, and Activities)</h3>
-        <p>We are hiring route and activities bus drivers for the 2024-25 school year, with potential regular routes for 2025-26.</p>
-        <p><strong>Requirements:</strong> Background check, drug testing, and a Class B license with a school bus endorsement (training provided).</p>
-        <p>Apply using the general application or contact <a href="mailto:jbray@gardiner.org">jbray@gardiner.org</a>.</p>
-      </article>
-      <article aria-labelledby="custodian-heading">
-        <h3 id="custodian-heading">Custodian</h3>
-        <p>Gardiner Public Schools is seeking a full-time custodian. Salary based on experience. Benefits included.</p>
-        <p>Apply at the school (510 Stone St, Gardiner, MT) or email <a href="mailto:jbray@gardiner.org">jbray@gardiner.org</a>.</p>
-        <p><a href="/uploads/1/0/2/4/102472730/classified_employment_application_18-19.pdf"
-            target="_blank"
-            rel="noopener"
-            aria-label="Download Classified Employment Application for Custodian"> Download Application </a> </p>
-      </article>
-    </section>
-  </main>
+<main role="main">
+
+  <!-- Applications Section -->
+  <section aria-labelledby="job-links-heading" class="page-title">
+    <h1 id="job-links-heading">Employment Applications</h1>
+    <ul class="static-link-grid" aria-label="Downloadable Job Application Forms">
+      <li>
+        <a href="/uploads/1/0/2/4/102472730/certified_employment_application25-26.pdf"
+           class="static-link"
+           target="_blank"
+           rel="noopener"
+           aria-label="Download Certified Job Application as PDF">
+          Certified Job Application
+        </a>
+      </li>
+      <li>
+        <a href="/uploads/1/0/2/4/102472730/classified_employment_application_25-26.docx.pdf"
+           class="static-link"
+           target="_blank"
+           rel="noopener"
+           aria-label="Download Classified Job Application as PDF">
+          Classified Job Application
+        </a>
+      </li>
+      <li class="full-span">
+        <a href="https://secureapplicant.com/STUDENT/GARDINER-PUBLIC-SCHOOLS/"
+           class="static-link"
+           target="_blank"
+           rel="noopener"
+           aria-label="Complete Online Background Check on Secure Applicant site, opens in new tab">
+          Online Background Check
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Job Openings Section -->
+  <section aria-labelledby="job-openings-heading" class="board-section">
+    <h2 id="job-openings-heading" class="about-section">Current Job Openings</h2>
+
+    <!-- Superintendent -->
+    <article aria-labelledby="superintendent-heading">
+      <h3 style="font-size: 1.5rem; color: black; margin: 2rem 0 0.5rem;" id="superintendent-heading">Superintendent / Principal</h3>
+      <p>Gardiner Schools is seeking a Principal/Superintendent beginning July 1, 2025. Gardiner is located at the north entrance of Yellowstone and serves 150 students. Applicants with a Principal certificate willing to enroll in a Superintendent program under a provisional license are welcome to apply.</p>
+      <p><strong>Benefits:</strong> Salary based on experience; subsidized housing available.</p>
+      <p><strong>Application Packet Must Include:</strong></p>
+      <ul>
+        <li>Letter of application/interest</li>
+        <li>Completed district application form</li>
+        <li>Resume</li>
+        <li>Three letters of reference</li>
+        <li>Transcripts</li>
+        <li>Copy of Class III MT Administrative Certificate (or equivalent)</li>
+      </ul>
+    </article>
+
+    <!-- Business Clerk -->
+    <article aria-labelledby="business-clerk-heading">
+      <h3 style="font-size: 1.5rem; color: black; margin: 2rem 0 0.5rem;" id="business-clerk-heading">Business Manager / District Clerk</h3>
+      <p>Gardiner Public Schools is hiring a Business Manager/District Clerk to oversee financial operations and administrative support. This position may be hybrid with partial remote work.</p>
+      <p><strong>Requirements:</strong> Degree in Business/Accounting, prior school clerk experience preferred.</p>
+      <p><strong>Housing:</strong> Full-time subsidized or part-time available.</p>
+      <p><strong>Application Packet Must Include:</strong></p>
+      <ul>
+        <li>Letter of application/interest</li>
+        <li>Completed district application form</li>
+        <li>Resume</li>
+        <li>Three letters of reference</li>
+      </ul>
+    </article>
+
+    <!-- Bus Driver -->
+    <article aria-labelledby="bus-driver-heading">
+      <h3 style="font-size: 1.5rem; color: black; margin: 2rem 0 0.5rem;" id="bus-driver-heading">Bus Drivers (Route, Substitute, and Activities)</h3>
+      <p>We are hiring route and activities bus drivers for the 2024–25 school year, with potential regular routes for 2025–26.</p>
+      <p><strong>Requirements:</strong> Background check, drug testing, and a Class B license with a school bus endorsement (training provided).</p>
+      <p>Apply using the general application or contact <a href="mailto:jbray@gardiner.org" aria-label="Email jbray@gardiner.org">jbray@gardiner.org</a>.</p>
+    </article>
+
+    <!-- Custodian -->
+    <article aria-labelledby="custodian-heading">
+      <h3 style="font-size: 1.5rem; color: black; margin: 2rem 0 0.5rem;" id="custodian-heading">Custodian</h3>
+      <p>Gardiner Public Schools is seeking a full-time custodian. Salary based on experience. Benefits included.</p>
+      <p>Apply at the school (510 Stone St, Gardiner, MT) or email <a href="mailto:jbray@gardiner.org" aria-label="Email jbray@gardiner.org">jbray@gardiner.org</a>.</p>
+      <p>
+        <a href="/uploads/1/0/2/4/102472730/classified_employment_application_18-19.pdf"
+           target="_blank"
+           rel="noopener"
+           aria-label="Download Classified Employment Application PDF for Custodian position">
+          Download Application
+        </a>
+      </p>
+    </article>
+
+  </section>
+</main>
+
  <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-top">
         <!-- Box 1: Logo + Contact Info -->
         <div class="footer-box" aria-labelledby="footer-contact">
           <div class="footer-box-content"> <img src="/images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
-            <p>Gardiner Public Schools<br>
+			  <address style="font-style: normal;">Gardiner Public Schools<br>
               510 Stone Street<br>
               Gardiner, MT 59030<br>
-              Call: <a href="tel:+14068487563">(406) 848-7563</a><br>
-              Fax: (406) 848-0606</p>
+              Call: <a href="tel:+14068487563" aria-label="Call Gardiner Public Schools at 406 848 7563">(406) 848-7563</a><br>
+              Fax: (406) 848-0606</address>
           </div>
         </div>
         <!-- Box 2: Important Links -->
@@ -191,11 +224,12 @@
       <p>&copy; 2025 Gardiner Public Schools. All rights reserved.</p>
     </div>
   </footer>
-  <button class="scroll-top" aria-label="Scroll to top">
-  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
+<button class="scroll-top" aria-label="Scroll to top">
+  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <title>Upward arrow</title>
+    <polyline points="18 15 12 9 6 15" />
   </svg>
-  </button>
+</button>
   <script src="/js/headerscroll.js"></script>
   <script src="/js/hamburger.js"></script>
   <script src="/js/focus.js"></script>

@@ -23,12 +23,13 @@
 <body>
 <div class="site-wrapper">
   <header>
-    <h1>Welcome to Gardiner Public Schools</h1>
+    <span>Welcome to Gardiner Public Schools</span>
     <!-- Dark Mode Button -->
-    <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
-    <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round"
-	aria-labelledby="darkmode-title">
+<button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32"
+       fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
       <title id="darkmode-title">Toggle dark and light mode</title>
       <circle cx="12" cy="12" r="5" class="sun-core"></circle>
       <g class="sun-rays">
@@ -87,93 +88,110 @@
   </span> </span> </button>
 	
 <main role="main">
-  <section class="page-title">
-    <h2 style="text-align: center;">Welcome to Gardiner Public Schools – Home of the Bruins!</h2>
-    <p style="text-align: center;">We value strong partnerships with parents and the community. Your involvement helps us shape responsible, well-educated students. We encourage you to ask questions, share ideas, and stay engaged as we continue to provide high-quality programs and top-ranked education.</p>
+  <section class="page-title" aria-labelledby="parents-page-heading">
+    <h1 id="parents-page-heading" style="text-align: center;">Welcome to Gardiner Public Schools – Home of the Bruins!</h1>
+    <p style="text-align: center;">
+      We value strong partnerships with parents and the community. Your involvement helps us shape responsible, well-educated students. We encourage you to ask questions, share ideas, and stay engaged as we continue to provide high-quality programs and top-ranked education.
+    </p>
   </section>
-  <br>
-  <section class="button-grid-section">
-    <div class="button-grid"> <a href="parents/supply-lists.html" class="grid-button"> <img src="images/icons/supplies.png" alt="Supplies icon"> Supply Lists </a> <a href="parents/bus-routes.html" class="grid-button"> <img src="images/icons/bus.png" alt="Bus icon"> Bus Routes </a> <a href="https://mtdecloud1.infinitecampus.org/campus/gardiner.jsp" class="grid-button"> <img src="images/icons/computer.png" alt="Portal icon"> Infinite Campus </a> <a href="parents/volunteer.html" class="grid-button"> <img src="images/icons/volunteer.png" alt="Volunteer icon"> Volunteer </a> </div>
+
+  <section class="button-grid-section" aria-labelledby="quicklinks-heading">
+    <h2 id="quicklinks-heading" class="sr-only">Parent Quick Access Buttons</h2>
+    <ul class="button-grid" role="list" aria-label="Parent quick links">
+      <li><a href="parents/supply-lists.html" class="grid-button"><img src="images/icons/supplies.png" alt="Supplies icon"> Supply Lists</a></li>
+      <li><a href="parents/bus-routes.html" class="grid-button"><img src="images/icons/bus.png" alt="Bus icon"> Bus Routes</a></li>
+      <li><a href="https://mtdecloud1.infinitecampus.org/campus/gardiner.jsp" class="grid-button" target="_blank" rel="noopener" aria-label="Open Infinite Campus in new tab"><img src="images/icons/computer.png" alt="Portal icon"> Infinite Campus</a></li>
+      <li><a href="parents/volunteer.html" class="grid-button"><img src="images/icons/volunteer.png" alt="Volunteer icon"> Volunteer</a></li>
+    </ul>
   </section>
-  <hr class="section-divider">
-  <section class="accordion-section"> <br>
-    <h2 class="accordion-heading">Parent Resources</h2>
-    <hr>
-    <div class="accordion">
-      <button class="accordion-toggle">Parent Forms</button>
-      <div class="accordion-content">
+
+  <hr class="section-divider" aria-hidden="true" />
+<br>
+  <section class="accordion-section" aria-labelledby="parent-resources-heading">
+    <h2 id="parent-resources-heading" class="accordion-heading">Parent Resources</h2>
+
+    <div class="accordion" role="region" aria-label="Parent Resources Accordion">
+      <!-- Each toggle should have aria-controls and aria-expanded (optional if handled in JS) -->
+      <button class="accordion-toggle" aria-controls="parent-forms">Parent Forms</button>
+      <div id="parent-forms" class="accordion-content">
         <ul>
-          <li><a href="forms/authorization_for_treatment_2024-2025.pdf" target="_blank">Authorization for Treatment</a></li>
-          <li><a href="forms/free_reduced_lunch_application_2024-2025.pdf" target="_blank">Free &amp; Reduced Lunch (Paper Application)</a></li>
-          <li><a href="https://dca.opi.mt.gov/frapp" target="_blank">Free &amp; Reduced Lunch (Online Application)</a></li>
+          <li><a href="forms/authorization_for_treatment_2024-2025.pdf" target="_blank" aria-label="Authorization for Treatment PDF, opens in new tab">Authorization for Treatment</a></li>
+          <li><a href="forms/free_reduced_lunch_application_2024-2025.pdf" target="_blank" aria-label="Free and Reduced Lunch paper application, opens in new tab">Free &amp; Reduced Lunch (Paper)</a></li>
+          <li><a href="https://dca.opi.mt.gov/frapp" target="_blank" aria-label="Free and Reduced Lunch online application, opens in new tab">Free &amp; Reduced Lunch (Online)</a></li>
           <li><a href="forms/registration.pdf" target="_blank">Student Registration</a></li>
           <li><a href="forms/reqrecords.pdf" target="_blank">Request for Records</a></li>
           <li><a href="forms/transchange.pdf" target="_blank">Transportation Change</a></li>
           <li><a href="parents/out-of-district-enrollment.html" target="_blank">Out of District Policy/Application</a></li>
-          <li><a href="parents/bullying-harassment-hazing.html" target="_blank">Bullying, Harassment, and Hazing Policy/Forms</a></li>
-          <li><a href="forms/missingchildoptin.pdf" target="_blank">Missing Child Photo Repository Opt-in</a></li>
-          <li><a href="https://www.k12specialmarkets.com/Enroll?std=&selState=26" target="_blank">Gerber Insurance</a></li>
+          <li><a href="parents/bullying-harassment-hazing.html" target="_blank">Bullying, Harassment, and Hazing</a></li>
+          <li><a href="forms/missingchildoptin.pdf" target="_blank">Missing Child Opt-in Form</a></li>
+          <li><a href="https://www.k12specialmarkets.com/Enroll?std=&selState=26" target="_blank" aria-label="Gerber Insurance Enrollment, opens in new tab">Gerber Insurance</a></li>
         </ul>
       </div>
-      <button class="accordion-toggle">Student Forms</button>
-      <div class="accordion-content">
+
+      <button class="accordion-toggle" aria-controls="student-forms">Student Forms</button>
+      <div id="student-forms" class="accordion-content">
         <ul>
-          <li><a href="forms/transcript_worksheet.pdf" target="_blank">Credit Check/Transcript Worksheet</a></li>
+          <li><a href="forms/transcript_worksheet.pdf" target="_blank">Transcript Worksheet</a></li>
           <li><a href="forms/coursecat.pdf" target="_blank">Course Catalog</a></li>
           <li><a href="forms/internet-agreement.pdf" target="_blank">Internet Agreement</a></li>
           <li><a href="forms/grad-reqs.pdf" target="_blank">Graduation Requirements</a></li>
           <li><a href="forms/chromebook-agreement.pdf" target="_blank">Chromebook Agreement</a></li>
-          <li><a href="forms/academic-growth-plan.pdf" target="_blank">Academic Eligibility/Growth Plan</a></li>
-          <li><a href="forms/5-8-sports-packet.pdf" target="_blank">Grades 5-8 Sports Packet</a></li>
-          <li><a href="forms/9-12-sports-packet.pdf" target="_blank">Grades 9-12 Sports Packet</a></li>
-          <li><a href="forms/student-directory.pdf" target="_blank">Student Directory Information Form</a></li>
+          <li><a href="forms/academic-growth-plan.pdf" target="_blank">Academic Growth Plan</a></li>
+          <li><a href="forms/5-8-sports-packet.pdf" target="_blank">Grades 5–8 Sports Packet</a></li>
+          <li><a href="forms/9-12-sports-packet.pdf" target="_blank">Grades 9–12 Sports Packet</a></li>
+          <li><a href="forms/student-directory.pdf" target="_blank">Student Directory Info</a></li>
         </ul>
       </div>
-      <button class="accordion-toggle">Quick Links</button>
-      <div class="accordion-content">
+
+      <button class="accordion-toggle" aria-controls="quick-links">Quick Links</button>
+      <div id="quick-links" class="accordion-content">
         <ul>
-          <li><a href="https://www.gardinernyef.org/" target="_blank">North Yellowstone Education Foundation</a></li>
-          <li><a href="https://www.gardinerbruinbooster.org/" target="_blank">Gardiner Bruins Booster Club</a></li>
-          <li><a href="https://shop.game-one.com/montana/gardiner/gardiner-bruins" target="_blank">Gardiner Bruins Merchandise</a></li>
-          <li><a href="https://www.visitgardinermt.com/" target="_blank">Gardiner Chamber of Commerce</a></li>
+          <li><a href="https://www.gardinernyef.org/" target="_blank" aria-label="North Yellowstone Education Foundation website, opens in new tab">North Yellowstone Education Foundation</a></li>
+          <li><a href="https://www.gardinerbruinbooster.org/" target="_blank" aria-label="Gardiner Bruins Booster Club website, opens in new tab">Bruin Booster Club</a></li>
+          <li><a href="https://shop.game-one.com/montana/gardiner/gardiner-bruins" target="_blank" aria-label="Gardiner Bruins Merchandise shop, opens in new tab">Merchandise Shop</a></li>
+          <li><a href="https://www.visitgardinermt.com/" target="_blank" aria-label="Gardiner Chamber of Commerce site, opens in new tab">Chamber of Commerce</a></li>
         </ul>
       </div>
-      <button class="accordion-toggle">Resources</button>
-      <div class="accordion-content">
+     <button class="accordion-toggle" aria-controls="resources-panel" aria-expanded="false" id="resources-toggle">Resources</button>
+      <div id="resources-panel" class="accordion-content" role="region" aria-labelledby="resources-toggle">
         <ul>
-          <li><a href="https://drive.google.com/file/d/1JNbBsRiSXs6qGnpekUWs5GTs3dFv2Rl1/view?usp=sharing" target="_blank">Summer Meals Info</a></li>
-          <li><a href="https://docs.google.com/document/d/1tv7gHpcZRRIhKhk6Qd39jaYbXdWaxVmIUfQC_FZPkYo/edit?usp=sharing" target="_blank">School Wellness Policy</a></li>
-          <li><a href="parents/newsletters.html" target="_blank">Newsletters</a></li>
-          <li><a href="https://drive.google.com/file/d/1D4roLeuVM6lMFvDpSnXu9lnXuc8J8eCA/view?usp=sharing" target="_blank">Out of District Enrollment Policy</a></li>
-          <li><a href="forms/boardpolicy.pdf" target="_blank">Board Policy</a></li>
-          <li><a href="parents/school-safety.html" target="_blank">School Safety</a></li>
-          <li><a href="parents/nondiscrimination-statement.html" target="_blank">Non-Discrimination Statement</a></li>
-          <li><a href="parents/community.html" target="_blank">Community</a></li>
-          <li><a href="library.html" target="_blank">Library</a></li>
-          <li><a href="out-of-district-enrollment" target="_blank">Out of District Enrollment Policy/Forms</a></li>
+          <li><a href="https://drive.google.com/file/d/1JNbBsRiSXs6qGnpekUWs5GTs3dFv2Rl1/view?usp=sharing" target="_blank" aria-label="Summer Meals Information PDF on Google Drive, opens in new tab">Summer Meals Info</a></li>
+          <li><a href="https://docs.google.com/document/d/1tv7gHpcZRRIhKhk6Qd39jaYbXdWaxVmIUfQC_FZPkYo/edit?usp=sharing" target="_blank" aria-label="School Wellness Policy Google Doc, opens in new tab">School Wellness Policy</a></li>
+          <li><a href="parents/newsletters.html">Newsletters</a></li>
+          <li><a href="https://drive.google.com/file/d/1D4roLeuVM6lMFvDpSnXu9lnXuc8J8eCA/view?usp=sharing" target="_blank" aria-label="Out of District Enrollment Policy PDF on Google Drive, opens in new tab">Out of District Enrollment Policy</a></li>
+          <li><a href="forms/boardpolicy.pdf" target="_blank" aria-label="Board Policy PDF, opens in new tab">Board Policy</a></li>
+          <li><a href="parents/school-safety.html">School Safety</a></li>
+          <li><a href="parents/nondiscrimination-statement.html">Non-Discrimination Statement</a></li>
+          <li><a href="parents/community.html">Community</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="out-of-district-enrollment">Out of District Enrollment Policy/Forms</a></li>
         </ul>
       </div>
-      <button class="accordion-toggle">Discipline Matrices</button>
-      <div class="accordion-content">
+
+      <button class="accordion-toggle" aria-controls="discipline-panel" aria-expanded="false" id="discipline-toggle">Discipline Matrices</button>
+      <div id="discipline-panel" class="accordion-content" role="region" aria-labelledby="discipline-toggle">
         <ul>
-          <li><a href="parents/elementary-discipline.html" target="_blank">Elementary Matrix</a></li>
-          <li><a href="parents/secondary-discipline.html" target="_blank">High School Matrix</a></li>
+          <li><a href="parents/elementary-discipline.html">Elementary Matrix</a></li>
+          <li><a href="parents/secondary-discipline.html">High School Matrix</a></li>
         </ul>
       </div>
-      <button class="accordion-toggle">Student Handbooks</button>
-      <div class="accordion-content">
+
+      <button class="accordion-toggle" aria-controls="handbooks-panel" aria-expanded="false" id="handbooks-toggle">Student Handbooks</button>
+      <div id="handbooks-panel" class="accordion-content" role="region" aria-labelledby="handbooks-toggle">
         <ul>
-          <li><a href="forms/elem-handbook.pdf" target="_blank">Elementary Handbook</a></li>
-          <li><a href="forms/jh-hs-handbook.pdf" target="_blank">Middle &amp; High School Handbook</a></li>
+          <li><a href="forms/elem-handbook.pdf" target="_blank" aria-label="Elementary Handbook PDF, opens in new tab">Elementary Handbook</a></li>
+          <li><a href="forms/jh-hs-handbook.pdf" target="_blank" aria-label="Middle and High School Handbook PDF, opens in new tab">Middle &amp; High School Handbook</a></li>
         </ul>
       </div>
-      <button class="accordion-toggle">Special Education</button>
-      <div class="accordion-content">
+
+      <button class="accordion-toggle" aria-controls="special-ed-panel" aria-expanded="false" id="special-ed-toggle">Special Education</button>
+      <div id="special-ed-panel" class="accordion-content" role="region" aria-labelledby="special-ed-toggle">
         <ul>
           <li><a href="parents/sped-coop.html">Park County Special Education Cooperative</a></li>
-          <li><a href="forms/sped-handbook.pdf" target="_blank">Special Education Handbook</a></li>
+          <li><a href="forms/sped-handbook.pdf" target="_blank" aria-label="Special Education Handbook PDF, opens in new tab">Special Education Handbook</a></li>
         </ul>
       </div>
+
     </div>
   </section>
 </main>
@@ -184,11 +202,11 @@
         <!-- Box 1: Logo + Contact Info -->
         <div class="footer-box" aria-labelledby="footer-contact">
           <div class="footer-box-content"> <img src="/images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
-            <p>Gardiner Public Schools<br>
+			  <address style="font-style: normal;">Gardiner Public Schools<br>
               510 Stone Street<br>
               Gardiner, MT 59030<br>
-              Call: <a href="tel:+14068487563">(406) 848-7563</a><br>
-              Fax: (406) 848-0606</p>
+              Call: <a href="tel:+14068487563" aria-label="Call Gardiner Public Schools at 406 848 7563">(406) 848-7563</a><br>
+              Fax: (406) 848-0606</address>
           </div>
         </div>
         <!-- Box 2: Important Links -->
@@ -219,11 +237,12 @@
       <p>&copy; 2025 Gardiner Public Schools. All rights reserved.</p>
     </div>
   </footer>
-  <button class="scroll-top" aria-label="Scroll to top">
-  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
+<button class="scroll-top" aria-label="Scroll to top">
+  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <title>Upward arrow</title>
+    <polyline points="18 15 12 9 6 15" />
   </svg>
-  </button>
+</button>
   <script src="/js/headerscroll.js"></script>
   <script src="/js/hamburger.js"></script>
   <script src="/js/focus.js"></script>

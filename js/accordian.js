@@ -1,9 +1,5 @@
 // JavaScript Document
 
-// JavaScript Document
-
-console.log("Accordion script loaded!");
-
 const toggles = document.querySelectorAll(".accordion-toggle");
 
 toggles.forEach(button => {
@@ -11,10 +7,21 @@ toggles.forEach(button => {
     const content = button.nextElementSibling;
     const isOpen = content.style.display === "block";
 
-    // Close all open content
-    document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+    // Close all panels and update ARIA
+    document.querySelectorAll(".accordion-content").forEach(c => {
+      c.style.display = "none";
+    });
+    toggles.forEach(btn => {
+      btn.setAttribute("aria-expanded", "false");
+    });
 
-    // Toggle the clicked one
-    content.style.display = isOpen ? "none" : "block";
+    // Toggle current panel
+    if (!isOpen) {
+      content.style.display = "block";
+      button.setAttribute("aria-expanded", "true");
+    } else {
+      content.style.display = "none";
+      button.setAttribute("aria-expanded", "false");
+    }
   });
 });

@@ -23,12 +23,13 @@
 <body>
 <div class="site-wrapper">
   <header>
-    <h1>Welcome to Gardiner Public Schools</h1>
+    <span>Welcome to Gardiner Public Schools</span>
     <!-- Dark Mode Button -->
-    <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
-    <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round"
-	aria-labelledby="darkmode-title">
+<button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32"
+       fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
       <title id="darkmode-title">Toggle dark and light mode</title>
       <circle cx="12" cy="12" r="5" class="sun-core"></circle>
       <g class="sun-rays">
@@ -86,40 +87,72 @@
   <!-- middle bar -->
   </span> </span> </button>
 
-  <main role="main">
-    <section class="page-title" aria-labelledby="library-title">
-      <h2 id="library-title">Library Resources</h2>
-    </section>
+<main role="main">
+  <!-- Page Title Section -->
+  <section class="page-title" aria-labelledby="library-title">
+    <h1 id="library-title">Library Resources</h1>
+  </section>
 
-    <section class="page-content" role="region" aria-labelledby="library-intro-text">
-      <p>Welcome to the Gardiner School Library! Below you’ll find quick links to our digital resources, research databases, and catalog.</p>
-      <h4 id="need-help-text">Need Help?</h4>
-		<p>Contact <a href="mailto:carmen@gardiner.org">Mrs. Harbach</a>.</p>
-    </section>
+  <!-- Intro Paragraph -->
+  <section class="page-content" role="region" aria-labelledby="library-intro-text">
+    <p id="library-intro-text">
+      Welcome to the Gardiner School Library! Below you’ll find quick links to our digital resources, research databases, and catalog.
+    </p>
+  </section>
 
-    <section class="library-links" aria-label="Library Digital Resource Links">
-      <a href="http://gardiner.follettdestiny.com" target="_blank" rel="noopener" class="static-link" aria-label="Open Card Catalog in a new tab">
-        Card Catalog
-      </a>
-    </section>
+  <!-- Need Help Section -->
+  <section class="page-content" role="region" aria-labelledby="need-help-heading">
+    <h2 id="need-help-heading">Need Help?</h2>
+    <p>
+      Contact <a href="mailto:carmen@gardiner.org" aria-label="Email Mrs. Harbach at carmen@gardiner.org">Mrs. Harbach</a>.
+    </p>
+  </section>
 
-    <hr class="section-divider" aria-hidden="true">
-<br>
-    <section class="accordion-section" role="region" aria-labelledby="library-resources-heading">
-      <h2 id="library-resources-heading" style="text-align: center;">Other Library Resources</h2>
-      <div class="static-link-grid" role="group" aria-label="Online Research Tools">
-        <a href="https://galeapps.gale.com/apps/auth?userGroupName=gard53476&prodId=AONE" target="_blank" rel="noopener" class="static-link" aria-label="Open Academic OneFile database in a new tab">
+  <!-- Card Catalog Link -->
+  <section class="library-links" aria-labelledby="card-catalog-heading">
+    <h2 id="card-catalog-heading" class="sr-only">Library Card Catalog</h2>
+    <ul class="library-links" role="list" aria-label="Card Catalog Access">
+      <li>
+        <a href="http://gardiner.follettdestiny.com" target="_blank" rel="noopener" class="static-link"
+           aria-label="Card Catalog, opens in new tab">
+          Card Catalog
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="section-divider" aria-hidden="true">
+  <br>
+
+  <!-- Research Database Links -->
+  <section class="accordion-section" role="region" aria-labelledby="library-resources-heading">
+    <h2 id="library-resources-heading" style="text-align: center;">Other Library Resources</h2>
+    <ul class="static-link-grid" role="list" aria-label="Online Research Tools">
+      <li>
+        <a href="https://galeapps.gale.com/apps/auth?userGroupName=gard53476&prodId=AONE"
+           target="_blank" rel="noopener" class="static-link"
+           aria-label="Academic OneFile database, opens in new tab">
           Academic OneFile
         </a>
-        <a href="https://galeapps.gale.com/apps/auth?userGroupName=gard53476&prodId=OVIC" target="_blank" rel="noopener" class="static-link" aria-label="Open Opposing Viewpoints database in a new tab">
+      </li>
+      <li>
+        <a href="https://galeapps.gale.com/apps/auth?userGroupName=gard53476&prodId=OVIC"
+           target="_blank" rel="noopener" class="static-link"
+           aria-label="Opposing Viewpoints database, opens in new tab">
           Opposing Viewpoints
         </a>
-        <a href="https://galeapps.gale.com/apps/auth?userGroupName=gard53476&prodId=ITOF" target="_blank" rel="noopener" class="static-link full-span" aria-label="Open General OneFile database in a new tab">
+      </li>
+      <li class="full-span">
+        <a href="https://galeapps.gale.com/apps/auth?userGroupName=gard53476&prodId=ITOF"
+           target="_blank" rel="noopener" class="static-link"
+           aria-label="General OneFile database, opens in new tab">
           General OneFile
         </a>
-      </div>
-    </section>
-  </main>
+      </li>
+    </ul>
+  </section>
+</main>
+
 
 <footer role="contentinfo">
     <div class="footer-container">
@@ -127,11 +160,11 @@
         <!-- Box 1: Logo + Contact Info -->
         <div class="footer-box" aria-labelledby="footer-contact">
           <div class="footer-box-content"> <img src="/images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
-            <p>Gardiner Public Schools<br>
+			  <address style="font-style: normal;">Gardiner Public Schools<br>
               510 Stone Street<br>
               Gardiner, MT 59030<br>
-              Call: <a href="tel:+14068487563">(406) 848-7563</a><br>
-              Fax: (406) 848-0606</p>
+              Call: <a href="tel:+14068487563" aria-label="Call Gardiner Public Schools at 406 848 7563">(406) 848-7563</a><br>
+              Fax: (406) 848-0606</address>
           </div>
         </div>
         <!-- Box 2: Important Links -->
@@ -162,11 +195,12 @@
       <p>&copy; 2025 Gardiner Public Schools. All rights reserved.</p>
     </div>
   </footer>
-  <button class="scroll-top" aria-label="Scroll to top">
-  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
+<button class="scroll-top" aria-label="Scroll to top">
+  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <title>Upward arrow</title>
+    <polyline points="18 15 12 9 6 15" />
   </svg>
-  </button>
+</button>
   <script src="/js/headerscroll.js"></script>
   <script src="/js/hamburger.js"></script>
   <script src="/js/focus.js"></script>

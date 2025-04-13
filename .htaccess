@@ -6,6 +6,14 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+# Set index.html as the default page
+DirectoryIndex index.html
+
+# Rewrite URLs to remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
 # Set character encoding (helps with special characters)
 AddDefaultCharset UTF-8
 

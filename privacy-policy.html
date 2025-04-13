@@ -23,12 +23,13 @@
 <body>
 <div class="site-wrapper">
   <header>
-    <h1>Welcome to Gardiner Public Schools</h1>
+    <span>Welcome to Gardiner Public Schools</span>
     <!-- Dark Mode Button -->
-    <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
-    <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round"
-	aria-labelledby="darkmode-title">
+<button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32"
+       fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"
+       aria-hidden="true" focusable="false">
       <title id="darkmode-title">Toggle dark and light mode</title>
       <circle cx="12" cy="12" r="5" class="sun-core"></circle>
       <g class="sun-rays">
@@ -87,13 +88,13 @@
   </span> </span> </button>
   <main role="main">
     <section class="page-title" aria-labelledby="privacy-policy-heading">
-		<h2 id="privacy-policy-heading">Privacy Policy</h2>
+		<h1 id="privacy-policy-heading">Privacy Policy</h1>
 	  </section>
 	  <section class="legal-section" aria-labelledby="policy-overview">
-      <p>This policy outlines how Gardiner Public Schools handles student education records and personal information in compliance with FERPA, COPPA, HIPAA, and local board policies.</p>
+      <p id="policy-overview">This policy outlines how Gardiner Public Schools handles student education records and personal information in compliance with FERPA, COPPA, HIPAA, and local board policies.</p>
     </section>
     <section aria-labelledby="ferpa-heading" class="legal-section">
-      <h3 id="ferpa-heading">Family Educational Rights and Privacy Act (FERPA)</h3>
+      <h2 id="ferpa-heading">Family Educational Rights and Privacy Act (FERPA)</h2>
       <p>Gardiner Public Schools complies with FERPA, which affords parents and students over 18 years of age the right to:</p>
       <ul>
         <li>Inspect and review the student's education records within 45 days of a request.</li>
@@ -104,15 +105,15 @@
       <p><strong>Directory Information:</strong> The District may disclose directory information unless parents/guardians opt out in writing. Directory information includes: student’s name, address, telephone number, date and place of birth, honors and awards, and dates of attendance.</p>
     </section>
     <section aria-labelledby="coppa-heading" class="legal-section">
-      <h3 id="coppa-heading">Children's Online Privacy Protection Act (COPPA)</h3>
+      <h2 id="coppa-heading">Children's Online Privacy Protection Act (COPPA)</h2>
       <p>Gardiner Public Schools ensures compliance with COPPA by obtaining parental consent before collecting personal information from children under 13 through online educational services. Third-party online tools used by the District are evaluated for COPPA compliance, and consent may be granted on behalf of parents where appropriate under COPPA guidelines.</p>
     </section>
     <section aria-labelledby="hipaa-heading" class="legal-section">
-      <h3 id="hipaa-heading">Health Insurance Portability and Accountability Act (HIPAA)</h3>
+      <h2 id="hipaa-heading">Health Insurance Portability and Accountability Act (HIPAA)</h2>
       <p>While education records are generally exempt from HIPAA under FERPA, Gardiner Public Schools protects any health-related information in compliance with both HIPAA and FERPA. Student health records maintained by the school nurse or health officials are part of the education record and protected accordingly.</p>
     </section>
     <section aria-labelledby="policy3600-heading" class="legal-section">
-      <h3 id="policy3600-heading">Board Policy 3600 – Student Records</h3>
+      <h2 id="policy3600-heading">Board Policy 3600 – Student Records</h2>
       <p>In accordance with Board Policy 3600:</p>
       <ul>
         <li>The District shall maintain a permanent and cumulative record for each student.</li>
@@ -120,10 +121,10 @@
         <li>Parents may request an amendment to records they believe are inaccurate or violate student privacy.</li>
         <li>Disclosure of student records is logged and records are retained per state and federal guidelines.</li>
       </ul>
-      <p>The full policy is available in the District Office or <a href="documents/boardpolicy3600.pdf" target="_blank" rel="noopener">downloadable here (PDF)</a>.</p>
+      <p>The full policy is available in the District Office or <a href="documents/boardpolicy3600.pdf" target="_blank" rel="noopener"  aria-label="Download Board Policy 3600 as a PDF (opens in new tab)" type="application/pdf">downloadable here (PDF)</a>.</p>
     </section>
     <section aria-labelledby="policy-rights-heading" class="legal-section">
-      <h3 id="policy-rights-heading">Your Rights</h3>
+      <h2 id="policy-rights-heading">Your Rights</h2>
       <p>You have the right to:</p>
       <ul>
         <li>Know what information the school collects and how it is used.</li>
@@ -133,13 +134,13 @@
       </ul>
     </section>
     <section aria-labelledby="policy-contact-heading" class="legal-section">
-      <h3 id="policy-contact-heading">Contact Information</h3>
+      <h2 id="policy-contact-heading">Contact Information</h2>
       <p>If you have questions about this privacy policy or your rights under FERPA, COPPA, HIPAA, or local policy, please contact:</p>
-      <p> <strong>Gardiner Public Schools</strong><br>
+      <address> <strong>Gardiner Public Schools</strong><br>
         510 Stone Street<br>
         Gardiner, MT 59030<br>
-        Phone: <a href="tel:+14068487563">(406) 848-7563</a><br>
-        Email: <a href="mailto:julie@gardiner.org">julie@gardiner.org</a> </p>
+        Phone: <a href="tel:+14068487563" aria-label="Call Gardiner Public Schools at 406 848 7563">(406) 848-7563</a><br>
+        Email: <a href="mailto:julie@gardiner.org" aria-label="Email Gardiner Public Schools at julie@gardiner.org">julie@gardiner.org</a> </address>
     </section>
   </main>
 <footer role="contentinfo">
@@ -148,11 +149,11 @@
         <!-- Box 1: Logo + Contact Info -->
         <div class="footer-box" aria-labelledby="footer-contact">
           <div class="footer-box-content"> <img src="/images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
-            <p>Gardiner Public Schools<br>
+			  <address style="font-style: normal;">Gardiner Public Schools<br>
               510 Stone Street<br>
               Gardiner, MT 59030<br>
-              Call: <a href="tel:+14068487563">(406) 848-7563</a><br>
-              Fax: (406) 848-0606</p>
+              Call: <a href="tel:+14068487563" aria-label="Call Gardiner Public Schools at 406 848 7563">(406) 848-7563</a><br>
+              Fax: (406) 848-0606</address>
           </div>
         </div>
         <!-- Box 2: Important Links -->
@@ -183,11 +184,12 @@
       <p>&copy; 2025 Gardiner Public Schools. All rights reserved.</p>
     </div>
   </footer>
-  <button class="scroll-top" aria-label="Scroll to top">
-  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
+<button class="scroll-top" aria-label="Scroll to top">
+  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <title>Upward arrow</title>
+    <polyline points="18 15 12 9 6 15" />
   </svg>
-  </button>
+</button>
   <script src="/js/headerscroll.js"></script>
   <script src="/js/hamburger.js"></script>
   <script src="/js/focus.js"></script>

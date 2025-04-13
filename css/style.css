@@ -89,11 +89,23 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-family: "DroidSans-Bold", sans-serif;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.5rem;
+}
+
 p {
   margin-bottom: 1em;
 }
 
-.page-title h2{
+.page-title h1,
+.page-title h2 {
   text-align: center;
   padding: 0rem 0.5rem 2rem;
   font-family: "Quattrocento-Bold";
@@ -133,20 +145,20 @@ ul li, ol li {
   color: #222;
 }
 
-.page-content h3,
-.page-content h4 {
-  font-family: "DroidSans", serif;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  text-align: left;
-}
-
 .page-content h2 {
   font-family: "DroidSans", serif;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   text-align: left;
   color: #004060;
+}
+
+.page-content h3,
+.page-content h4 {
+  font-family: "DroidSans", serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .page-content p {
@@ -187,7 +199,7 @@ header {
   transition: padding 0.3s ease, font-size 0.3s ease;
 }
 
-header h1 {
+header span {
   font-family: "Bebas", sans-serif;
   font-size: 3rem;
   margin-bottom: 0.25em;
@@ -611,6 +623,8 @@ button:hover,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  list-style: none;
+  padding-left: 0;
 }
 
 .grid-button {
@@ -705,7 +719,7 @@ button:hover,
 }
 
 .accordion-content li {
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .accordion-content a {
@@ -845,7 +859,10 @@ footer {
   width: 100%;
 }
 
-.footer-box h1 {
+.footer-box h1,
+.footer-box h2,
+.footer-box h3,
+.footer-box h4 {
   font-family: "DroidSans", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
@@ -948,10 +965,6 @@ footer {
 
   .footer-logo {
     margin: 0 auto 1rem;
-  }
-
-  .footer-box h4 {
-    margin-bottom: 0.5rem;
   }
 
   .footer-links,
@@ -1068,7 +1081,10 @@ footer {
   text-align: center;
 }
 
-.about-section h2 {
+.about-section h1,
+.about-section h2,
+.about-section h3,
+.about-section h4 {
   font-family: "DroidSans", sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -1092,7 +1108,10 @@ footer {
   padding: 0 1rem;
 }
 
-.board-section h2 {
+.board-section h1,
+.board-section h2,
+.board-section h3,
+.board-section h4 {
   font-family: "DroidSans", sans-serif;
   font-size: 1.6rem;
   margin-bottom: 1rem;
@@ -1178,18 +1197,22 @@ footer {
 }
 
 .legal-section h1,
-.legal-section h2 {
+.legal-section h2,
+.legal-section h3,
+.legal-section h4 {
   font-family: "DroidSans", sans-serif;
   color: #004060;
   margin-bottom: 1rem;
 }
 
-.legal-section h1 {
+.legal-section h1,
+.legal-section h2 {
   font-size: 2rem;
   text-align: center;
 }
 
-.legal-section h2 {
+.legal-section h3,
+.legal-section h4  {
   font-size: 1.5rem;
   margin-top: 2rem;
 }
@@ -1234,6 +1257,9 @@ footer {
   display: flex;
   justify-content: center;
   margin: 2rem 0;
+  /* Accessibility fix: remove default <ul>/<li> styling */
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Optional: give static-link extra styling on this page if needed */
@@ -1328,6 +1354,32 @@ footer {
   .table {
     padding: 0 1rem;
   }
+}
+
+/* ---------------------------
+   Error 404 Page
+---------------------------- */
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.error-container .icon {
+  max-width: 150px;
+  height: auto;
+}
+
+.error-container .button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #004060;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 /* ---------------------------
@@ -1613,3 +1665,16 @@ body:not(.dark-mode) main {
   background-color: #fff !important;
   color: #222;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
