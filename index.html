@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,9 @@
     <!-- Dark Mode Button -->
     <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
     <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
+    stroke-linecap="round" stroke-linejoin="round"
+	aria-labelledby="darkmode-title">
+      <title id="darkmode-title">Toggle dark and light mode</title>
       <circle cx="12" cy="12" r="5" class="sun-core"></circle>
       <g class="sun-rays">
         <line x1="12" y1="1" x2="12" y2="3" />
@@ -80,11 +82,13 @@
     </ul>
   </nav>
   <!-- Hamburger Button (for mobile only) -->
-  <button class="hamburger-toggle" aria-label="Toggle Navigation" aria-expanded="false"> <span class="hamburger-icon"> <span class="hamburger-middle"><!-- middle bar --></span> </span> </button>
+  <button class="hamburger-toggle" aria-label="Toggle Navigation" aria-expanded="false"> <span class="hamburger-icon"> <span class="hamburger-middle">
+  <!-- middle bar -->
+  </span> </span> </button>
   <div role="img" class="carousel">
     <div class="carousel-track"> <img src="/images/index-carousel/slide1.jpg" alt="Picture of Gardiner School Building"> <img src="/images/index-carousel/slide2.jpg" alt="Picture of school parking lot"> <img src="/images/index-carousel/slide3.jpg" alt="Birds-eye view of Gardiner"> </div>
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+    <button class="carousel-btn prev" aria-label="Previous Slide" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" aria-label="Next slide" onclick="moveSlide(1)">&#10095;</button>
   </div>
   <main role="main">
     <section class="about-section">
@@ -96,14 +100,17 @@
     <hr class="section-divider">
     <br>
     <section class="accordion-section" role="region" aria-labelledby="external-resources-heading">
-      <h1 class="accordion-heading" id="external-resources-heading">External Links</h1>
-      <div class="static-link-grid" role="list" aria-label="External Resource Links"> <a href="https://www.gardinernyef.org/" class="static-link" target="_blank" tabindex="0" aria-label="North Yellowstone Education Foundation website, opens in new tab">North Yellowstone Education Foundation</a> <a href="https://www.gardinerbruinbooster.org/" class="static-link" target="_blank" tabindex="0" aria-label="Gardiner Bruins Booster Club Page, opens in new tab">Gardiner Bruins Booster Club</a> <a href="https://shop.game-one.com/montana/gardiner/gardiner-bruins" class="static-link full-span" target="_blank" tabindex="0" aria-label="Gardiner Bruins Merchandise Shop, opens in new tab">Gardiner Bruins Swag Shop</a> </div>
+      <h2 class="accordion-heading" id="external-resources-heading">External Links</h2>
+      <ul class="static-link-grid" aria-label="External Resource Links">
+        <li> <a href="https://www.gardinernyef.org/" class="static-link" target="_blank" aria-label="North Yellowstone Education Foundation website, opens in new tab"> North Yellowstone Education Foundation </a> </li>
+        <li> <a href="https://www.gardinerbruinbooster.org/" class="static-link" target="_blank" aria-label="Gardiner Bruins Booster Club Page, opens in new tab"> Gardiner Bruins Booster Club </a> </li>
+        <li class="full-span"> <a href="https://shop.game-one.com/montana/gardiner/gardiner-bruins" class="static-link" target="_blank" aria-label="Gardiner Bruins Merchandise Shop, opens in new tab"> Gardiner Bruins Swag Shop </a> </li>
+      </ul>
     </section>
   </main>
   <footer role="contentinfo">
     <div class="footer-container">
-      <div class="footer-top"> 
-        
+      <div class="footer-top">
         <!-- Box 1: Logo + Contact Info -->
         <div class="footer-box" aria-labelledby="footer-contact">
           <div class="footer-box-content"> <img src="/images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
@@ -114,11 +121,10 @@
               Fax: (406) 848-0606</p>
           </div>
         </div>
-        
         <!-- Box 2: Important Links -->
         <div class="footer-box" aria-labelledby="footer-links">
           <div class="footer-box-content">
-            <h1 id="footer-links">Important Information</h1>
+            <h2 id="footer-links">Important Information</h2>
             <ul class="footer-links">
               <li><a href="/job-openings.html">Job Openings</a></li>
               <li><a href="/library.html">Library</a></li>
@@ -128,15 +134,14 @@
             </ul>
           </div>
         </div>
-        
         <!-- Box 3: Social Media -->
         <div class="footer-box" aria-labelledby="footer-social">
           <div class="footer-box-content">
-            <h1 id="footer-social">Stay Connected</h1>
+            <h2 id="footer-social">Stay Connected</h2>
             <a href="https://www.facebook.com/BruinOne" target="_blank" rel="noopener" aria-label="Gardiner Public Schools Facebook Page"> <img src="/images/icons/facebook.png" alt="Facebook icon and link to Gardiner Schools' Facebook page" class="social-icon"> </a> </div>
         </div>
       </div>
-      <!-- end .footer-top --> 
+      <!-- end .footer-top -->
     </div>
     <!-- end .footer-container -->
     <hr class="footer-divider">
@@ -149,10 +154,10 @@
     <polyline points="18 15 12 9 6 15"/>
   </svg>
   </button>
-  <script src="/js/headerscroll.js"></script> 
-  <script src="/js/hamburger.js"></script> 
-  <script src="/js/focus.js"></script> 
-  <script src="/js/darkmode.js"></script> 
+  <script src="/js/headerscroll.js"></script>
+  <script src="/js/hamburger.js"></script>
+  <script src="/js/focus.js"></script>
+  <script src="/js/darkmode.js"></script>
   <script src="/js/carousel.js"></script>
   <div class="overlay"></div>
 </div>

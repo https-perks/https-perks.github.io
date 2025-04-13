@@ -1,9 +1,14 @@
 // JavaScript Document
 
+// hamburger.js - Improved version with functional focus trap and accessibility
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector('.hamburger-toggle');
   const sidebar = document.querySelector('.sidebar-nav');
+  const overlay = document.querySelector('.overlay');
   const links = sidebar.querySelectorAll('a');
+
+  let trapCleanup = null;
 
   function trapFocus(container, returnFocusEl) {
     const focusableSelectors = 'a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -11,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstEl = focusableEls[0];
     const lastEl = focusableEls[focusableEls.length - 1];
 
-    container.addEventListener('keydown', (e) => {
+    function keyHandler(e) {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstEl) {
@@ -24,37 +29,65 @@ document.addEventListener("DOMContentLoaded", () => {
             firstEl.focus();
           }
         }
+      } else if (e.key === 'Escape') {
+        closeMenu();
+        returnFocusEl.focus();
       }
+    }
 
-      if (e.key === 'Escape') {
-        document.body.classList.remove('nav-open');
-        container.classList.remove('active');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        returnFocusEl.focus(); // Return focus to hamburger icon
-      }
-    });
+    container.addEventListener('keydown', keyHandler);
+    return () => container.removeEventListener('keydown', keyHandler);
+  }
+
+  function openMenu() {
+    document.body.classList.add('nav-open');
+    sidebar.classList.add('active');
+    overlay.classList.add('open');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+
+    const firstLink = sidebar.querySelector('a, button');
+    if (firstLink) firstLink.focus();
+
+    trapCleanup = trapFocus(sidebar, toggleBtn);
+  }
+
+  function closeMenu() {
+    document.body.classList.remove('nav-open');
+    sidebar.classList.remove('active');
+    overlay.classList.remove('open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+
+    if (typeof trapCleanup === 'function') {
+      trapCleanup();
+      trapCleanup = null;
+    }
   }
 
   toggleBtn.addEventListener('click', () => {
-    const navIsOpen = document.body.classList.toggle('nav-open');
-    sidebar.classList.toggle('active');
-
-    // ✅ Update aria-expanded state
-    toggleBtn.setAttribute('aria-expanded', navIsOpen ? 'true' : 'false');
-
+    const navIsOpen = document.body.classList.contains('nav-open');
     if (navIsOpen) {
-      trapFocus(sidebar, toggleBtn);
-
-      const firstLink = sidebar.querySelector('a, button');
-      if (firstLink) firstLink.focus();
+      closeMenu();
+      toggleBtn.focus();
+    } else {
+      openMenu();
     }
+  });
+
+  toggleBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleBtn.click();
+    }
+  });
+
+  overlay.addEventListener('click', () => {
+    closeMenu();
+    toggleBtn.focus();
   });
 
   links.forEach(link => {
     link.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      document.body.classList.remove('nav-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+      closeMenu();
       toggleBtn.focus();
     });
   });
