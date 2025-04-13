@@ -1,0 +1,1590 @@
+/* ---------------------------
+   FONT FACE IMPORTS
+---------------------------- */
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DroidSans';
+  src: url('../fonts/DroidSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DroidSans';
+  src: url('../fonts/DroidSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quattrocento';
+  src: url('../fonts/Quattrocento-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quattrocento-Bold';
+  src: url('../fonts/Quattrocento-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('../fonts/Bebas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ---------------------------
+   RESET + BASE
+---------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  padding: 0;
+  margin: 0;
+}
+
+/* Explicit light mode defaults */
+body:not(.dark-mode) {
+  background-color: #fff;
+  color: #222;
+}
+
+/* ---------------------------
+   TYPOGRAPHY
+---------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DroidSans", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.page-title h2{
+  text-align: center;
+  padding: 0rem 0.5rem 2rem;
+  font-family: "Quattrocento-Bold";
+  font-size: 32pt;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.page-title p {
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  padding: 0rem 0.5rem 0.5rem;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1000px;
+}
+
+/* Tidy up list indentation */
+ul, ol {
+  padding-left: 2rem;
+  margin-left: 0;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0rem 0.5rem;
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #222;
+}
+
+.page-content h3,
+.page-content h4 {
+  font-family: "DroidSans", serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.page-content h2 {
+  font-family: "DroidSans", serif;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: #004060;
+}
+
+.page-content p {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.page-content ul,
+.page-content ol {
+  padding-left: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.page-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.page-content a {
+  color: #004080;
+  text-decoration: underline;
+}
+
+.page-content a:hover,
+.page-content a:focus {
+  color: #002a5e;
+  text-decoration: none;
+}
+
+/* ---------------------------
+   HEADER + SHRINK ON SCROLL
+---------------------------- */
+header {
+  background-color: #002b45;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+header h1 {
+  font-family: "Bebas", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.25em;
+  transition: font-size 0.3s ease;
+}
+
+/* Shrink effect when scrolling */
+body.header-shrink header {
+  padding: 0.5rem;
+}
+
+body.header-shrink header h1 {
+  font-size: 2rem;
+}
+
+/* ---------------------------
+   DESKTOP NAVIGATION
+---------------------------- */
+.desktop-nav {
+  background-color: #004060;
+  padding: 0;
+  position: relative;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+
+.main-nav > li {
+  position: relative;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  font-family: "Quattrocento", serif;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  background-color: #006395;
+  color: aliceblue;
+}
+
+/* Dropdown menu */
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004060;
+  padding: 0;
+  padding-left: 0;   /* Optional, but here for clarity */
+  margin: 0;         /* Optional: resets margin */
+  list-style: none;  /* Removes list bullets */
+  min-width: 200px;
+  z-index: 99;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-menu li a {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+
+/* ---------------------------
+   MOBILE NAVIGATION (SIDEBAR)
+---------------------------- */
+/* Hamburger toggle button */
+.hamburger-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-toggle {
+  background: #004060;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hamburger bars */
+.hamburger-icon {
+  position: relative;
+  width: 100%;
+  height: 24px; /* Space for all 3 lines */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after,
+.hamburger-icon div {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+}
+
+/* Middle bar as a div inside the span */
+.hamburger-icon .hamburger-middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Top and bottom bars */
+.hamburger-icon::before {
+  content: '';
+  top: 4px;
+}
+
+.hamburger-icon::after {
+  content: '';
+  top: 20px;
+  transform: translateY(-100%);
+}
+
+/* Transform hamburger to X */
+body.nav-open .hamburger-icon {
+  background: transparent;
+}
+
+body.nav-open .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+body.nav-open .hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+body.nav-open .hamburger-icon div {
+  opacity: 0;
+}
+
+body.nav-open .hamburger-middle {
+  opacity: 0;
+}
+
+
+/* Sidebar container */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #004060;
+  padding-top: 3rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+/* Slide in when active */
+body.nav-open .sidebar-nav {
+  left: 0;
+}
+
+/* Sidebar nav list */
+.sidebar-nav .main-nav {
+  display: none;
+}
+
+body.nav-open .sidebar-nav .main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.sidebar-nav .main-nav li {
+  width: 100%;
+  border-bottom: 1px solid #006395;
+}
+
+.sidebar-nav .main-nav a {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  font-family: "Quattrocento", serif;
+}
+
+/* Dropdowns inside sidebar */
+.sidebar-nav .dropdown-menu {
+  position: relative;
+  display: none;
+  background-color: #003050;
+  border-radius: 0;
+  top: auto;
+  left: auto;
+  min-width: 100%;
+}
+
+.sidebar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.sidebar-nav .dropdown-menu a {
+  padding-left: 2rem;
+}
+
+/* Dimmed background overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+body.nav-open .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* ---------------------------
+   LAYOUT + SPACING
+---------------------------- */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------
+   FOOTER
+---------------------------- */
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ---------------------------
+   BUTTONS
+---------------------------- */
+button,
+.button {
+  background-color: #004060;
+  color: #fff;
+  font-family: "Karla", sans-serif;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover,
+.button:hover {
+  background-color: #006395;
+}
+
+/* ---------------------------
+   CAROUSEL
+---------------------------- */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  flex: 0 0 100%;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-small {
+  position: relative;
+  width: 100%;
+  max-width: 900px;         /* Optional: controls horizontal width */
+  max-height: 450px;
+  height: 80vh;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.75rem;   /* Optional: add some rounding */
+}
+
+.carousel-small .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-small .carousel-track img {
+  width: 100%;
+  height: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  flex: 0 0 100%;
+  display: block;
+}
+
+.carousel-small .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-small .carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-small .carousel-btn.next {
+  right: 10px;
+}
+
+/* ---------------------------
+   BUTTON GRID WITH ICONS
+---------------------------- */
+.button-grid-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.grid-button {
+  background-color: #004060;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Quattrocento", sans-serif;
+  padding: 1rem;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.grid-button:hover {
+  background-color: #006395;
+  transform: scale(1.03);
+}
+
+.grid-button img {
+  max-width: 60%;
+  max-height: 60%;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+
+.grid-button span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ---------------------------
+   ACCORDION STYLES
+---------------------------- */
+.accordion-section {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+
+.accordion-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "DroidSans", sans-serif;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-toggle {
+  width: 100%;
+  background-color: #004060;
+  border: none;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+  border-bottom: 1px solid #ccc;
+  transition: background 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #e0e0e0;
+  color: #004060;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-left: 4px solid #004060;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.accordion-content li {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-content a {
+  color: #004060;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Karla", sans-serif;
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.accordion-content a:hover {
+  text-decoration: underline;
+  color: #006395;
+}
+
+/* ---------------------------
+   RESPONSIVE BREAKPOINTS
+---------------------------- */
+@media (max-width: 700px) {
+  .hamburger-toggle {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: block;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 701px) {
+  .hamburger-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 701px) {
+  .sidebar-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-nav a {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  header {
+    padding-left: 60px;
+	padding-right: 60px;/* enough space to clear the hamburger */
+  }
+}
+
+/* ---------------------------
+   SCROLL FUNCTIONALITY
+---------------------------- */
+body.nav-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ---------------------------
+   FOOTER AT BOTTOM
+---------------------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+main {
+  flex: 1; /* takes up remaining space to push footer down */
+}
+
+/* ---------------------------
+   FOOTER STYLING
+---------------------------- */
+footer {
+  background-color: #eee;
+  padding: 2rem 1rem 1rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;   /* Ensure equal height columns */
+  gap: 2rem;
+  min-height: 220px;      /* Optional: ensures enough vertical space */
+}
+
+.footer-box {
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;    /* Vertically center content */
+  justify-content: center;/* Horizontally center content */
+  text-align: center;
+}
+
+.footer-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* Vertically center inside each box */
+  width: 100%;
+}
+
+.footer-box h4 {
+  font-family: "DroidSans", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #004060;
+}
+
+.footer-box:first-child .footer-box-content {
+  align-items: center;
+  text-align: center;
+}
+
+.footer-box p,
+.footer-links,
+.footer-socials {
+  font-family: "Karla", sans-serif;
+  line-height: 1.6;
+}
+
+.footer-links,
+.footer-socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-socials li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-socials a {
+  text-decoration: none;
+  color: #004060;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #006395;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.footer-divider {
+  margin: 1rem auto 1rem;
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 90%;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+/* Facebook Logo */
+.social-icon {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-box {
+    flex: 1 1 260px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-box-content {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .footer-top .footer-box:nth-child(3) {
+    flex-basis: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem;
+  }
+
+  .footer-box h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links,
+  .footer-links li {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-box {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .social-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ---------------------------
+   CALENDER STYLING
+---------------------------- */
+.calendar-embed {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.calendar-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-card h2 {
+  font-family: "DroidSans", sans-serif;
+  color: #004060;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-wrapper {
+  max-width: 1200px;
+  width: 80vw;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.calendar-frame {
+  width: 100%;
+  height: 800px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .calendar-frame {
+    height: 600px;
+  }
+}
+
+/* ---------------------------
+   SCROLL TO TOP
+---------------------------- */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #004060;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top.show {
+  display: flex;
+}
+
+.scroll-top:hover {
+  background-color: #006395;
+  transform: scale(1.05);
+}
+
+.scroll-icon {
+  width: 32px;
+  height: 32px;
+  stroke: white;
+  display: block;
+  margin: auto;
+  transform: scale(1.2);
+}
+
+/* ---------------------------
+   ABOUT
+---------------------------- */
+.about-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: "DroidSans", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004060;
+}
+
+.about-section p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* ---------------------------
+   BOARD
+---------------------------- */
+.board-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.board-section h2 {
+  font-family: "DroidSans", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #004060;
+}
+
+.board-section p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.board-section a {
+  font-family: "Karla", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.static-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.static-link-grid .static-link {
+  display: block;
+  background-color: #004060;
+  color: white;
+  text-align: center;
+  align-content: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.static-link-grid .static-link:hover {
+  background-color: #e0e0e0;
+  color: #004060;
+}
+
+.static-link-grid .static-link:focus {
+  outline: 3px solid #ffcc00;
+  outline-offset: 3px;
+  background-color: #006395;
+  color: #fff;
+}
+
+/* Make the last one span two columns */
+.static-link-grid .full-span {
+  grid-column: span 2;
+}
+
+/* ---------------------------
+   TITLE IX SECTION STYLES
+---------------------------- */
+.legal-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  font-family: "Karla", sans-serif;
+  line-height: 1.75;
+  color: #222;
+}
+
+.legal-section h1,
+.legal-section h2 {
+  font-family: "DroidSans", sans-serif;
+  color: #004060;
+  margin-bottom: 1rem;
+}
+
+.legal-section h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.legal-section h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.legal-section p,
+.legal-section ul {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.legal-section ul {
+  padding-left: 1.5rem;
+}
+
+.legal-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-section a {
+  color: #004060;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.legal-section a:hover {
+  text-decoration: underline;
+  color: #006395;
+}
+
+.legal-section address {
+  font-style: normal;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------
+   Library Page Styles
+---------------------------- */
+
+/* Center the single catalog link */
+.library-links {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* Optional: give static-link extra styling on this page if needed */
+.library-links .static-link {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: #004060;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.library-links .static-link:hover {
+  background-color: #e0e0e0;
+  color: #004060;
+}
+
+/* Databases Grid - already styled via .static-link-grid */
+.library-databases {
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+}
+
+.library-databases .static-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Optional: Add spacing if needed between section blocks */
+.library-links + .library-databases {
+  margin-top: 3rem;
+}
+
+.library-intro p {
+  font-size: 16pt;
+  margin-bottom: 1rem;
+}
+
+.library-heading h3 {
+  font-size: 18pt;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------
+   Table Styles
+---------------------------- */
+.table {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  padding: 0rem 1.5rem;
+  margin: 2rem auto;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+  border: 1px solid #333; /* 1pt border */
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.table ul {
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+.table li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .table {
+    padding: 0 1rem;
+  }
+}
+
+/* ---------------------------
+   LIGHT MODE (DEFAULT)
+---------------------------- */
+body {
+  background-color: #fff;
+  color: #222;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  width: 100%;
+  background-color: inherit;
+}
+
+/* ---------------------------
+   DARK MODE STYLING
+---------------------------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode header, 
+body.dark-mode .hamburger-toggle {
+  background-color: #1B1B1B;
+}
+
+body.dark-mode .calendar-card,
+body.dark-mode .calendar-card h2,
+body.dark-mode .calendar-wrapper,
+body.dark-mode .calendar-frame {
+  background-color: #1B1B1B;
+  color: #c3dff0;
+}
+
+body.dark-mode nav,
+body.dark-mode .main-nav,
+body.dark-mode .sidebar-nav {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .main-nav a,
+body.dark-mode .sidebar-nav a,
+body.dark-mode .dropdown-menu li a,
+body.dark-mode .about-section p,
+body.dark-mode .page-content ul,
+body.dark-mode .page-content ol,
+body.dark-mode .page-content il,
+body.dark-mode .page-content p,
+body.dark-mode .board-section h2, 
+body.dark-mode .board-section p, 
+body.dark-mode .legal-section,
+body.dark-mode .table ul,
+body.dark-mode .table td,
+body.dark-mode .table {
+  color: #D0D0D0;
+}
+
+body.dark-mode .legal-section a:hover {
+  color: #FFFFFF;
+}
+
+body.dark-mode .main-nav a:hover,
+body.dark-mode .sidebar-nav a:hover,
+body.dark-mode .dropdown-menu li a:hover, 
+body.dark-mode .dark-toggle:hover,
+body.dark-mode .hamburger-toggle:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .about-section h2,
+body.dark-mode .legal-section h1,
+body.dark-mode .legal-section h2,
+body.dark-mode .legal-section a {
+  color: #c3dff0;
+}
+
+body.dark-mode .footer-box h4,
+body.dark-mode .footer-box-content h4,
+body.dark-mode .page-content h1,
+body.dark-mode .page-content h2,
+body.dark-mode .page-content h3,
+body.dark-mode .page-content h4,
+body.dark-mode .page-content a,
+body.dark-mode .footer-bottom p,
+body.dark-mode .table p {
+  color: #ffffff;
+}
+
+body.dark-mode .accordion-toggle,
+body.dark-mode .static-link, 
+body.dark-mode .table th {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+body.dark-mode .accordion-toggle:hover,
+body.dark-mode .static-link-grid .static-link:hover{
+  background-color: #004060;
+  color: #FFFFFF;
+}
+
+body.dark-mode .accordion-toggle:focus,
+body.dark-mode .static-link-grid .static-link:focus{
+  background-color: #004060;
+  color: white;
+}
+	
+body.dark-mode .accordion-content,
+body.dark-mode .static-link-grid .static-link,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .library-links .static-link {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+body.dark-mode .library-links .static-link:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .table th,
+body.dark-mode .table td {
+  border: 1px solid #aaa;
+}
+
+/* ---------------------------
+   LINK COLORS
+---------------------------- */
+/* General link color, but NOT buttons */
+a,
+.footer-links a {
+  color: #004060;
+}
+
+a:hover,
+.footer-links a:hover {
+  color: #006395;
+}
+
+body.dark-mode a,
+body.dark-mode .static-link-grid .static-link,
+body.dark-mode .accordion-toggle,
+body.dark-mode .footer-links a {
+  color: #a8d1e7;
+}
+
+body.dark-mode a:hover,
+body.dark-mode .static-link-grid .static-link:hover,
+body.dark-mode .accordion-toggle:hover,
+body.dark-mode .footer-links a:hover {
+  color: #c4e4f3;
+}
+
+/* =============================
+   DARK MODE TOGGLE ANIMATED ICON
+============================= */
+.dark-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon {
+  transition: transform 0.6s ease;
+}
+
+/* Animate on click */
+.dark-mode .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* SUN visible in light mode */
+.toggle-icon .sun-core,
+.toggle-icon .sun-rays {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* MOON hidden in light mode */
+.toggle-icon .moon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* In dark mode, flip visibility */
+body.dark-mode .toggle-icon .sun-core,
+body.dark-mode .toggle-icon .sun-rays {
+  opacity: 0;
+}
+
+body.dark-mode .toggle-icon .moon {
+  opacity: 1;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+body.show-focus .dark-toggle:focus {
+  outline: 2px solid #ffd54f;
+  box-shadow: 0 0 0 4px rgba(255, 213, 79, 0.5);
+  border-radius: 4px;
+}
+
+
+/* ---------------------------
+   ACCESSIBILITY
+---------------------------- */
+
+/* Remove default outlines */
+:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Show gold glow ONLY when navigating with keyboard */
+/*
+body.show-focus a:focus,
+body.show-focus button:focus,
+body.show-focus input:focus,
+body.show-focus textarea:focus,
+body.show-focus select:focus,
+body.show-focus [tabindex]:focus {
+  outline: 2px solid #ffd54f;
+  box-shadow: 0 0 0 4px rgba(255, 213, 79, 0.5);
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+}
+*/
+
+/* Optional: pulsing effect if desired */
+@keyframes pulseFocus {
+  0%   { box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.7); }
+  50%  { box-shadow: 0 0 10px 6px rgba(255, 215, 0, 0.4); }
+  100% { box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.7); }
+}
+
+/* If you want to enable pulse, swap the .show-focus rules above with this: */
+
+body.show-focus a:focus,
+body.show-focus button:focus,
+body.show-focus [tabindex]:focus {
+  animation: pulseFocus 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+body:not(.dark-mode),
+body:not(.dark-mode) main {
+  background-color: #fff !important;
+  color: #222;
+}

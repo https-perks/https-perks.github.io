@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="Gardiner Public Schools" />
+<meta property="og:description" content=". . . a passion for learning, location and community!" />
+<meta property="og:image" content="https://www.gardiner.org/images/social/og-image.png" />
+<meta property="og:url" content="https://www.gardiner.org/" />
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Gardiner" />
+<link rel="manifest" href="/images/site.webmanifest" />
+<title>Gardiner Public Schools Home</title>
+<!-- Link your own stylesheet -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Load fonts locally or via Google Fonts (recommended) --> 
+<!-- Example Google Font: -->
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Quattrocento&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+  <header>
+    <h1>Welcome to Gardiner Public Schools</h1>
+<!-- Dark Mode Button -->
+<button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+  <svg class="toggle-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5" class="sun-core"></circle>
+    <g class="sun-rays">
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </g>
+    <path class="moon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+</button>
+
+  </header>
+  <!-- DESKTOP NAVIGATION -->
+  <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+    <ul class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="parents.html">Parents</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li class="dropdown"> <a href="#">Calendar</a>
+        <ul class="dropdown-menu">
+          <li><a href="calendars/yearly-calendar.html">Yearly Calendar</a></li>
+          <li><a href="calendars/events-calendar.html">Events Calendar</a></li>
+          <li><a href="calendars/menu-calendar.html">Breakfast/Lunch Menu</a></li>
+        </ul>
+      </li>
+      <li><a href="school-board.html">School Board</a></li>
+      <li><a href="extracurriculars.html">Extracurriculars</a></li>
+      <li><a href="title-ix.html">Title IX</a></li>
+    </ul>
+  </nav>
+  <!-- MOBILE SIDEBAR NAVIGATION -->
+  <nav class="sidebar-nav" role="navigation" aria-label="Mobile Navigation">
+    <ul class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="parents.html">Parents</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li class="dropdown"> <a href="#">Calendar</a>
+        <ul class="dropdown-menu">
+          <li><a href="calendars/yearly-calendar.html">Yearly Calendar</a></li>
+          <li><a href="calendars/events-calendar.html">Events Calendar</a></li>
+          <li><a href="calendars/menu-calendar.html">Breakfast/Lunch Menu</a></li>
+        </ul>
+      </li>
+      <li><a href="school-board.html">School Board</a></li>
+      <li><a href="extracurriculars.html">Extracurriculars</a></li>
+      <li><a href="title-ix.html">Title IX</a></li>
+    </ul>
+  </nav>
+  <!-- Hamburger Button (for mobile only) -->
+  <button class="hamburger-toggle" aria-label="Toggle Navigation" aria-expanded="false"> <span class="hamburger-icon"> <span class="hamburger-middle"><!-- middle bar --></span> </span> </button>
+	
+<div role="img" class="carousel">
+  <div class="carousel-track"> <img src="images/index-carousel/slide1.jpg" alt="Slide 1"> <img src="images/index-carousel/slide2.jpg" alt="Slide 2"> <img src="images/index-carousel/slide3.jpg" alt="Slide 3"> </div>
+  <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+<main role="main">
+<section class="about-section">
+  <h2>About Gardiner Public Schools</h2>
+  <p>
+    Located at the northern gateway to Yellowstone National Park, <strong>Gardiner Public Schools</strong> offers a unique K–12 learning experience grounded in community, exploration, and academic excellence. 
+  </p>
+  <p>
+    With small class sizes, personalized instruction, and access to the natural world just beyond our classrooms, students engage in learning that goes beyond textbooks. Whether studying science through real geothermal features or exploring history in our own backyard, we empower students to grow into thoughtful, capable, and curious leaders.
+  </p>
+</section>
+<br>
+	 <hr class="section-divider">
+	<br>
+	 <section class="accordion-section" role="region" aria-labelledby="external-resources-heading">
+    <h2 class="accordion-heading" id="board-resources-heading">External Links</h2>
+
+    <div class="static-link-grid" role="list" aria-label="External Resource Links">
+      <a href="https://www.gardinernyef.org/" class="static-link" target="_blank" role="listitem" tabindex="0" aria-label="North Yellowstone Education Foundation website, opens in new tab">North Yellowstone Education Foundation</a>
+      <a href="https://www.gardinerbruinbooster.org/" class="static-link" target="_blank" role="listitem" tabindex="0" aria-label="Gardiner Bruins Booster Club Page, opens in new tab">Gardiner Bruins Booster Club</a>
+	  <a href="https://shop.game-one.com/montana/gardiner/gardiner-bruins" class="static-link full-span" target="_blank" role="listitem" tabindex="0" aria-label="Gardiner Bruins Merchandise Shop, opens in new tab">Gardiner Bruins Swag Shop</a>
+ </div>
+  </section>
+	
+</main>
+	
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top"> 
+        
+        <!-- Box 1: Logo + Contact Info -->
+        <div class="footer-box" aria-labelledby="footer-contact">
+          <div class="footer-box-content"> <img src="images/logo.png" alt="Gardiner Public Schools Logo" class="footer-logo" >
+            <p>Gardiner Public Schools<br>
+              510 Stone Street<br>
+              Gardiner, MT 59030<br>
+			  Call: <a href="tel:+14068487563">(406) 848-7563</a><br>
+			  Fax: (406) 848-0606</p>
+          </div>
+        </div>
+        
+        <!-- Box 2: Important Links -->
+        <div class="footer-box" aria-labelledby="footer-links">
+          <div class="footer-box-content">
+            <h4 id="footer-links">Important Information</h4>
+            <ul class="footer-links">
+              <li><a href="job-openings.html">Job Openings</a></li>
+              <li><a href="library.html">Library</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><a href="site-map.html">Site Map</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Box 3: Social Media -->
+        <div class="footer-box" aria-labelledby="footer-social">
+          <div class="footer-box-content">
+            <h4 id="footer-social">Stay Connected</h4>
+            <a href="https://www.facebook.com/BruinOne" target="_blank" rel="noopener" aria-label="Gardiner Public Schools Facebook Page"> <img src="images/icons/facebook.png" alt="Facebook icon and link to Gardiner Schools' Facebook page" class="social-icon"> </a> </div>
+        </div>
+      </div>
+      <!-- end .footer-top --> 
+    </div>
+    <!-- end .footer-container -->
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>&copy; 2025 Gardiner Public Schools. All rights reserved.</p>
+    </div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">  <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg></button>
+  <script src="js/headerscroll.js"></script> 
+  <script src="js/hamburger.js"></script>
+  <script src="js/focus.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/carousel.js"></script>
+  <div class="overlay"></div>
+</div>
+</body>
+</html>

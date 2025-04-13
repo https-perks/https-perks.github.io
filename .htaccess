@@ -1,0 +1,31 @@
+# Use a custom 404 page
+ErrorDocument 404 /404.html
+
+# Redirect all traffic to HTTPS (if you have an SSL certificate)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Set character encoding (helps with special characters)
+AddDefaultCharset UTF-8
+
+# Enable browser caching (speeds up repeat visits)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/gif "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 week"
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# Protect .htaccess from being viewed
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
