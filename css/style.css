@@ -845,7 +845,7 @@ footer {
   width: 100%;
 }
 
-.footer-box h4 {
+.footer-box h1 {
   font-family: "DroidSans", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
@@ -1068,7 +1068,7 @@ footer {
   text-align: center;
 }
 
-.about-section h2 {
+.about-section h1 {
   font-family: "DroidSans", sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -1401,8 +1401,8 @@ body.dark-mode .legal-section a {
   color: #c3dff0;
 }
 
-body.dark-mode .footer-box h4,
-body.dark-mode .footer-box-content h4,
+body.dark-mode .footer-box h1,
+body.dark-mode .footer-box-content h1,
 body.dark-mode .page-content h1,
 body.dark-mode .page-content h2,
 body.dark-mode .page-content h3,
