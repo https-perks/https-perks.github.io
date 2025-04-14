@@ -87,7 +87,27 @@
   <!-- middle bar --> 
   </span> </span> </button>
 	
-<main role="main"> </main>
+<main role="main" aria-label="Gardiner Golf">
+  <section class="page-title" aria-labelledby="golf-heading">
+    <h1 id="golf-heading">Golf</h1>
+  </section>
+
+  <section class="page-content" aria-labelledby="golf-calendar">
+    <div class="calendar-card" role="region" aria-labelledby="golf-calendar">
+	  <h2 id="golf-calendar" style="margin-top: 0.5rem;">Golf Calendar</h2>
+      <div class="calendar-wrapper">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=gardiner.org_5s1946deqmfnkgi24hpuumt4rk%40group.calendar.google.com&ctz=America%2FDenver"
+          class="calendar-frame"
+          title="Golf Events Calendar"
+          frameborder="0"
+          scrolling="no"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
 	
 <footer role="contentinfo">
     <div class="footer-container">

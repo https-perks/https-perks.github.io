@@ -86,19 +86,25 @@
   <button class="hamburger-toggle" aria-label="Toggle Navigation" aria-expanded="false"> <span class="hamburger-icon"> <span class="hamburger-middle">
   <!-- middle bar -->
   </span> </span> </button>
-  <main role="main">
-    <section class="calendar-card">
-      <h2>Master Calendar</h2>
-      <div class="calendar-wrapper">
-        <iframe 
-      src="https://calendar.google.com/calendar/embed?title=Master&showTz=0&wkst=1&bgcolor=%23FFFFFF&src=gardiner.org_ksfnedp746mmu8ehkc86slvb98%40group.calendar.google.com&color=%23865A5A&src=gardiner.org_ko5pi14k5ta67eshbtlabk7lhs%40group.calendar.google.com&color=%23691426&src=gardiner.org_0sh2huslua7at55u2kn2viequs%40group.calendar.google.com&color=%23853104&src=gardiner.org_id4th4u9a4m8nokoa2fk2g2iok%40group.calendar.google.com&color=%23B1440E&src=gardiner.org_5s1946deqmfnkgi24hpuumt4rk%40group.calendar.google.com&color=%23853104&src=gardiner.org_t10dd05vdj07d1q00777ufij2o%40group.calendar.google.com&color=%236B3304&src=gardiner.org_fqo7oa8svma4ivo4tmtpgdo748%40group.calendar.google.com&color=%23691426&src=gardiner.org_pjko4t7b1m2270k5ipmab086rk%40group.calendar.google.com&color=%2329527A&src=gardiner.org_5p6o5oaqlp73q3j0lkve06ka3k%40group.calendar.google.com&color=%2329527A&src=gardiner.org_8n9r87adi02lcq0tc5mhtpd5q8%40group.calendar.google.com&color=%235F6B02&ctz=America%2FDenver"
-      title="Gardiner Public Schools Master Calendar"
-      frameborder="0"
-      scrolling="no"
-      class="calendar-frame"> </iframe>
-      </div>
-    </section>
-  </main>
+ <main role="main" aria-labelledby="master-calendar-heading">
+  <section class="calendar-card">
+    <h1 id="master-calendar-heading">Master Calendar</h1>
+    <div class="calendar-wrapper" role="region" aria-label="Embedded Google Calendar showing Gardiner Public Schools events">
+      <iframe 
+        src="https://calendar.google.com/calendar/embed?title=Master&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=gardiner.org_ksfnedp746mmu8ehkc86slvb98%40group.calendar.google.com&amp;color=%23865A5A&amp;src=gardiner.org_ko5pi14k5ta67eshbtlabk7lhs%40group.calendar.google.com&amp;color=%23691426&amp;src=gardiner.org_0sh2huslua7at55u2kn2viequs%40group.calendar.google.com&amp;color=%23853104&amp;src=gardiner.org_id4th4u9a4m8nokoa2fk2g2iok%40group.calendar.google.com&amp;color=%23B1440E&amp;src=gardiner.org_5s1946deqmfnkgi24hpuumt4rk%40group.calendar.google.com&amp;color=%23853104&amp;src=gardiner.org_t10dd05vdj07d1q00777ufij2o%40group.calendar.google.com&amp;color=%236B3304&amp;src=gardiner.org_fqo7oa8svma4ivo4tmtpgdo748%40group.calendar.google.com&amp;color=%23691426&amp;src=gardiner.org_pjko4t7b1m2270k5ipmab086rk%40group.calendar.google.com&amp;color=%2329527A&amp;src=gardiner.org_5p6o5oaqlp73q3j0lkve06ka3k%40group.calendar.google.com&amp;color=%2329527A&amp;src=gardiner.org_8n9r87adi02lcq0tc5mhtpd5q8%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=America%2FDenver"
+        title="Gardiner Public Schools Master Calendar"
+        class="calendar-frame"
+        width="100%"
+        height="600"
+        frameborder="0"
+        scrolling="no"
+        style="border: 0;"
+        aria-label="Master calendar of Gardiner Public Schools with academic and extracurricular events">
+      </iframe>
+    </div>
+  </section>
+</main>
+
 <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-top">

@@ -86,26 +86,42 @@
   <button class="hamburger-toggle" aria-label="Toggle Navigation" aria-expanded="false"> <span class="hamburger-icon"> <span class="hamburger-middle">
   <!-- middle bar -->
   </span> </span> </button>
-  <main role="main">
-    <section class="page-title">
-      <h2>24-25 School Calendar</h2>
-      <object
-			data="../documents/24-25_academic_calendar.pdf" 
-			type="application/pdf"
-			style="max-width: 1000px; width: 100%; height: 70vh; display: block; margin: 2rem auto; padding: 0rem 1.5rem">
-        <p>Your browser does not support PDFs. <a href="../documents/24-25_academic_calendar.pdf">Download the PDF</a>.</p>
-      </object>
-      <br>
-      <br>
-      <h2>25-26 School Calendar</h2>
-      <object
-			data="../documents/25-26_academic_calendar.pdf" 
-			type="application/pdf"
-			style="max-width: 1000px; width: 100%; height: 70vh; display: block; margin: 2rem auto; padding: 0rem 1.5rem">
-        <p>Your browser does not support PDFs. <a href="../documents/24-25_academic_calendar.pdf">Download the PDF</a>.</p>
-      </object>
-    </section>
-  </main>
+<main role="main">
+  <section class="page-title" aria-labelledby="calendar-heading">
+    <h1 id="calendar-heading">Academic Yearly Calendars</h1>
+  </section>
+
+  <section class="page-content" aria-labelledby="calendar-2425-heading">
+    <h2 id="calendar-2425-heading">2024–2025 School Calendar</h2>
+    <object
+      data="../documents/24-25_academic_calendar.pdf"
+      type="application/pdf"
+      aria-label="Embedded PDF view of the 2024–2025 school calendar"
+      style="max-width: 1000px; width: 100%; height: 70vh; display: block; margin: 2rem auto; padding: 0 1.5rem;"
+    >
+      <p>
+        Your browser does not support embedded PDFs. 
+        <a href="../documents/24-25_academic_calendar.pdf" target="_blank" rel="noopener" aria-label="Download the 2024 to 2025 academic calendar PDF">Download the PDF</a>.
+      </p>
+    </object>
+  </section>
+
+  <section class="page-content" aria-labelledby="calendar-2526-heading">
+    <h2 id="calendar-2526-heading">2025–2026 School Calendar</h2>
+    <object
+      data="../documents/25-26_academic_calendar.pdf"
+      type="application/pdf"
+      aria-label="Embedded PDF view of the 2025–2026 school calendar"
+      style="max-width: 1000px; width: 100%; height: 70vh; display: block; margin: 2rem auto; padding: 0 1.5rem;"
+    >
+      <p>
+        Your browser does not support embedded PDFs. 
+        <a href="../documents/25-26_academic_calendar.pdf" target="_blank" rel="noopener" aria-label="Download the 2025 to 2026 academic calendar PDF">Download the PDF</a>.
+      </p>
+    </object>
+  </section>
+</main>
+
  <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-top">

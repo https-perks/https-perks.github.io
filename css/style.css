@@ -253,8 +253,8 @@ body.header-shrink header h1 {
 }
 
 .main-nav a:hover {
-  background-color: #006395;
-  color: aliceblue;
+  background-color: #005C8A;
+  color: #fff;
 }
 
 /* Dropdown menu */
@@ -513,7 +513,7 @@ button,
 
 button:hover,
 .button:hover {
-  background-color: #006395;
+  background-color: #005C8A;
 }
 
 /* ---------------------------
@@ -644,7 +644,7 @@ button:hover,
 }
 
 .grid-button:hover {
-  background-color: #006395;
+  background-color: #005C8A;
   transform: scale(1.03);
 }
 
@@ -733,7 +733,7 @@ button:hover,
 
 .accordion-content a:hover {
   text-decoration: underline;
-  color: #006395;
+  color: #005C8A;
 }
 
 /* ---------------------------
@@ -1175,7 +1175,7 @@ footer {
 .static-link-grid .static-link:focus {
   outline: 3px solid #ffcc00;
   outline-offset: 3px;
-  background-color: #006395;
+  background-color: #005C8A;
   color: #fff;
 }
 
@@ -1239,7 +1239,7 @@ footer {
 
 .legal-section a:hover {
   text-decoration: underline;
-  color: #006395;
+  color: #005C8A;
 }
 
 .legal-section address {

@@ -87,8 +87,44 @@
   <!-- middle bar --> 
   </span> </span> </button>
 	
-<main role="main"> </main>
-	
+<main role="main" aria-label="Gardiner High School Football">
+  <section class="page-title" aria-labelledby="football-heading">
+    <h1 id="football-heading">Gardiner Football</h1>
+	</section>
+	<section class="page-content" aria-labelledby="football-carousel">
+    <!-- Carousel Section -->
+    <div class="carousel-small" role="region" id="football-carousel">
+      <div class="carousel-track">
+        <img src="/images/extracurricular/football/walk-out.jpg" alt="Football players walking away from the field">
+        <img src="/images/extracurricular/football/field-view.jpg" alt="Football field picture with a rainbow in background">
+        <img src="/images/extracurricular/football/fieldhouse-view.jpg" alt="Game action shot on the field">
+        <img src="/images/extracurricular/football/huddle.jpg" alt="Football players huddle on the field">
+        <img src="/images/extracurricular/football/break.jpg" alt="Football players cooling off in the shade">
+        <img src="/images/extracurricular/football/scoreboard.jpg" alt="Football scoreboard after a winning game">
+      </div>
+      <button class="carousel-btn prev" aria-label="Previous Image">&#10094;</button>
+      <button class="carousel-btn next" aria-label="Next Image">&#10095;</button>
+    </div>
+
+    <!-- Spacer -->
+    <div style="height: 2rem;"></div>
+
+    <!-- Calendar Section -->
+    <div class="calendar-card">
+      <h2 id="football-calendar" style="margin-top: 0.5rem;">Football Schedule</h2>
+      <div class="calendar-wrapper" role="region" aria-label="Football Calendar">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=gardiner.org_id4th4u9a4m8nokoa2fk2g2iok%40group.calendar.google.com&amp;ctz=America%2FDenver"
+          class="calendar-frame"
+          title="Football Events Calendar"
+          frameborder="0"
+          scrolling="no"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>	
 <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-top">

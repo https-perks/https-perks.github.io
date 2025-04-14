@@ -87,7 +87,26 @@
   <!-- middle bar --> 
   </span> </span> </button>
 	
-<main role="main"> </main>
+<main role="main" aria-label="Gardiner High School Basketball">
+  <section class="page-title" aria-labelledby="basketball-heading">
+    <h1 id="basketball-heading">Gardiner Basketball</h1>
+
+    <div class="calendar-card">
+      <h2 style="font-size: 2rem;" id="basketball-calendar">Basketball Schedule</h2>
+      <div class="calendar-wrapper" role="region" aria-label="Basketball Calendar">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=gardiner.org_ksfnedp746mmu8ehkc86slvb98%40group.calendar.google.com&amp;ctz=America%2FDenver"
+          class="calendar-frame"
+          title="Basketball Events Calendar"
+          frameborder="0"
+          scrolling="no"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
 	
 <footer role="contentinfo">
     <div class="footer-container">
