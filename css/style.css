@@ -1145,6 +1145,7 @@ footer {
   /* Accessibility fix: remove default <ul>/<li> styling */
   list-style: none;
   padding-left: 0;
+  align-items: stretch;
 }
 
 .static-link-grid li {
@@ -1152,11 +1153,13 @@ footer {
 }
 
 .static-link-grid .static-link {
-  display: block;
+  display: flex;
   background-color: #004060;
   color: white;
   text-align: center;
   align-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
@@ -1165,6 +1168,7 @@ footer {
   border-bottom: 1px solid #ccc;
   transition: background 0.3s ease, color 0.3s ease;
   width: 100%;
+  height: 100%
 }
 
 .static-link-grid .static-link:hover {

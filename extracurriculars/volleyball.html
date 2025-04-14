@@ -87,8 +87,27 @@
   <!-- middle bar --> 
   </span> </span> </button>
 	
-<main role="main"> </main>
-	
+<main role="main" aria-label="Volleyball">
+  <section class="page-title" aria-labelledby="volleyball-heading">
+    <h1 id="volleyball-heading">Volleyball</h1>
+  </section>
+
+  <section class="page-content" aria-labelledby="volleyball-calendar">
+    <div class="calendar-card" role="region" aria-labelledby="volleyball-calendar">
+	  <h2 id="volleyball-calendar" style="margin-top: 0.5rem;">Volleyball Calendar</h2>
+      <div class="calendar-wrapper">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=gardiner.org_8n9r87adi02lcq0tc5mhtpd5q8%40group.calendar.google.com&ctz=America%2FDenver"
+          class="calendar-frame"
+          title="Volleyball Events Calendar"
+          frameborder="0"
+          scrolling="no"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>	
 <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-top">
